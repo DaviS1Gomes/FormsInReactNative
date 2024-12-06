@@ -4,9 +4,12 @@ import * as S from '../styles/Header';
 
 function Shipping(): React.JSX.Element {
   return (
-    <S.Header>
-      <Text> Hello World </Text>
-    </S.Header>
+    <S.Container>
+      <S.Header>
+        <S.MainTextHeader>Checkout</S.MainTextHeader>
+      </S.Header>
+      <S.Category />
+    </S.Container>
   );
 }
 
