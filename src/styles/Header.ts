@@ -8,12 +8,27 @@ export const Header = styled.View`
   background-color: #000;
   height: 70px;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  flex-direction: row;
+  align-content: center;
 `;
+
+export const CancelButton = styled.Pressable`
+  margin-left: 20px;
+`;
+
+export const CancelText = styled.Text`
+  font-size: 20px;
+  /* color: white; */
+  color: #98999a;
+`;
+
 export const MainTextHeader = styled.Text`
   color: #fff;
   font-size: 25px;
   text-align: center;
+  position: absolute;
+  left: 37.5%;
 `;
 export const Category = styled.View`
   background-color: #f9f9f9;
@@ -21,28 +36,28 @@ export const Category = styled.View`
   flex-direction: row;
   padding-top: 30px;
   padding-bottom: 30px;
-  padding-left: 20;
-  padding-right: 20;
+  padding-left: 20px;
+  padding-right: 20px;
   justify-content: space-around;
   align-items: center;
 
   border-bottom-color: #f1f1f1;
-  border-bottom-width: 2;
+  border-bottom-width: 2px;
   border-bottom-style: solid;
 `;
 export const ButtonShipping = styled.Pressable`
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 5;
+  gap: 5px;
   justify-content: center;
 `;
 
 export const HifenDiv = styled.View`
   width: 10px;
   height: 2px;
-  margin-left: 10;
-  margin-right: 10;
+  margin-left: 10px;
+  margin-right: 10px;
   background-color: #c9c9c9;
 `;
 
@@ -68,7 +83,7 @@ export const ButtonPayment = styled.Pressable`
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 5;
+  gap: 5px;
   justify-content: center;
 `;
 
@@ -94,7 +109,7 @@ export const ButtonReview = styled.Pressable`
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 5;
+  gap: 5px;
   justify-content: center;
 `;
 
@@ -119,25 +134,25 @@ export const TextCategoryReview = styled.Text`
 export const ContentData = styled.ScrollView`
   background-color: #fff;
   padding-bottom: 50px;
-  margin-left: 20;
+  margin-left: 20px;
 `;
 
 export const TitleData = styled.Text`
   font-weight: bold;
   font-size: 22.5px;
-  margin-top: 25;
-  margin-bottom: 25;
+  margin-top: 25px;
+  margin-bottom: 25px;
 `;
 export const BoxInputs = styled.View`
   width: 90%;
-  gap: 10;
+  gap: 10px;
   margin-left: 7.5px;
-  margin-bottom: 20;
+  margin-bottom: 20px;
 `;
 
 export const Names = styled.Text`
   font-weight: bold;
-  font-size: 20;
+  font-size: 20px;
 `;
 
 export const NameAstDiff = styled.Text`
@@ -145,7 +160,7 @@ export const NameAstDiff = styled.Text`
 `;
 
 export const TextInputShipping = styled.TextInput`
-  border-width: 1;
+  border-width: 1px;
   border-style: solid;
   border-radius: 7.5px;
   border-color: #c5c6c6;
@@ -159,12 +174,12 @@ export const TextInputShipping = styled.TextInput`
 export const Footer = styled.View`
   display: flex;
   border-top-color: #f1f1f1;
-  border-top-width: 2;
+  border-top-width: 2px;
   border-top-style: solid;
   justify-content: center;
   align-items: center;
-  padding-top: 30;
-  padding-bottom: 30;
+  padding-top: 30px;
+  padding-bottom: 30px;
   background-color: #f9f9f9;
 `;
 

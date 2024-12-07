@@ -1,11 +1,16 @@
 import React from 'react';
 import * as S from '../styles/Header';
-import {Text, View, TextInput} from 'react-native';
 
 function Shipping(): React.JSX.Element {
   return (
     <S.Container>
       <S.Header>
+        <S.CancelButton
+          onPress={() => {
+            console.log('Button Cancel Funcionando');
+          }}>
+          <S.CancelText>Cancel</S.CancelText>
+        </S.CancelButton>
         <S.MainTextHeader>Checkout</S.MainTextHeader>
       </S.Header>
       <S.Category>
@@ -40,25 +45,29 @@ function Shipping(): React.JSX.Element {
           <S.Names>
             Country <S.NameAstDiff>*</S.NameAstDiff>
           </S.Names>
-          <S.TextInputShipping placeholder="Placeholder" />
+          <S.TextInputShipping placeholder="Ex: Brazil" />
         </S.BoxInputs>
         <S.BoxInputs>
           <S.Names>
             Full name <S.NameAstDiff>*</S.NameAstDiff>
           </S.Names>
-          <S.TextInputShipping placeholder="Placeholder" />
+          <S.TextInputShipping placeholder="Ex: Luke Skywalker" />
         </S.BoxInputs>
         <S.BoxInputs>
           <S.Names>
             Street address <S.NameAstDiff>*</S.NameAstDiff>
           </S.Names>
-          <S.TextInputShipping placeholder="Placeholder" />
+          <S.TextInputShipping placeholder="Ex: Wolf Pen Road" />
         </S.BoxInputs>
         <S.BoxInputs>
           <S.Names>
-            Others <S.NameAstDiff>*</S.NameAstDiff>
+            Number Adress <S.NameAstDiff>*</S.NameAstDiff>
           </S.Names>
-          <S.TextInputShipping placeholder="Placeholder" />
+          <S.TextInputShipping placeholder="Ex: 1313" />
+        </S.BoxInputs>
+        <S.BoxInputs>
+          <S.Names>Others</S.Names>
+          <S.TextInputShipping placeholder="Ex: Reference..." />
         </S.BoxInputs>
       </S.ContentData>
       <S.Footer>
@@ -66,7 +75,7 @@ function Shipping(): React.JSX.Element {
           onPress={() => {
             console.log('Confirm Button');
           }}>
-          <S.TextConfirmButton>Confirm and Continue</S.TextConfirmButton>
+          <S.TextConfirmButton>{'Confirm and Continue >'}</S.TextConfirmButton>
         </S.ButtonConfirm>
       </S.Footer>
     </S.Container>
