@@ -1,17 +1,27 @@
 import React from 'react';
 import * as S from '../screens/ShippingScreen/Style';
-import ShippingButton from './ShippingButton';
-import PaymentButton from './PaymentButton';
-import ButtonReview from './ButtonReview';
+import ButtonCategory from './ButtonCategory';
 
 function Category(): React.JSX.Element {
   return (
     <S.Category>
-      <ShippingButton />
+      <ButtonCategory
+        onPressButton={'BOTAO PRESSIONADO'}
+        TextCategory={'Shipping'}
+        NumberCategory={1}
+      />
       <S.HifenDiv />
-      <PaymentButton />
+      <ButtonCategory
+        onPressButton={'BOTAO PRESSIONADO 2'}
+        TextCategory={'Payment'}
+        NumberCategory={2}
+      />
       <S.HifenDiv />
-      <ButtonReview />
+      <ButtonCategory
+        onPressButton={'BOTAO PRESSIONADO 3'}
+        TextCategory={'Review'}
+        NumberCategory={3}
+      />
     </S.Category>
   );
 }

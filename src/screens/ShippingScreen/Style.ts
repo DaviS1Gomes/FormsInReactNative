@@ -79,58 +79,6 @@ export const TextCategoryShipping = styled.Text`
   font-weight: 500;
 `;
 
-export const ButtonPayment = styled.Pressable`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 5px;
-  justify-content: center;
-`;
-
-export const NumberCategoryPayment = styled.Text`
-  height: 25px;
-  width: 25px;
-
-  background-color: #000;
-  border-radius: 100px;
-
-  line-height: 25px;
-  text-align: center;
-  font-size: 15px;
-  color: #fff;
-`;
-
-export const TextCategoryPayment = styled.Text`
-  font-size: 17.5px;
-  font-weight: 500;
-`;
-
-export const ButtonReview = styled.Pressable`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 5px;
-  justify-content: center;
-`;
-
-export const NumberCategoryReview = styled.Text`
-  height: 25px;
-  width: 25px;
-
-  background-color: #000;
-  border-radius: 100px;
-
-  line-height: 25px;
-  text-align: center;
-  font-size: 15px;
-  color: #fff;
-`;
-
-export const TextCategoryReview = styled.Text`
-  font-size: 17.5px;
-  font-weight: 500;
-`;
-
 export const ContentData = styled.ScrollView`
   background-color: #fff;
   padding-bottom: 50px;
