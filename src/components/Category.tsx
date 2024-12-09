@@ -2,7 +2,7 @@ import React from 'react';
 import * as S from '../screens/ShippingScreen/Style';
 import ButtonCategory from './ButtonCategory';
 
-function Category(): React.JSX.Element {
+const Category: React.FC = () => {
   return (
     <S.Category>
       <ButtonCategory
@@ -24,6 +24,6 @@ function Category(): React.JSX.Element {
       />
     </S.Category>
   );
-}
+};
 
 export default Category;

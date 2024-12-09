@@ -1,20 +1,22 @@
 import styled from 'styled-components/native';
 
 export const Container = styled.View`
-  height: 100%;
+  flex: 1;
   background-color: #fff;
 `;
 export const Header = styled.View`
   background-color: #000;
   height: 70px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: row;
   align-content: center;
 `;
 
 export const CancelButton = styled.Pressable`
   margin-left: 20px;
+  position: absolute;
+  left: 1px;
 `;
 
 export const CancelText = styled.Text`
@@ -27,12 +29,9 @@ export const MainTextHeader = styled.Text`
   color: #fff;
   font-size: 25px;
   text-align: center;
-  position: absolute;
-  left: 37.5%;
 `;
 export const Category = styled.View`
   background-color: #f9f9f9;
-  display: flex;
   flex-direction: row;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -46,7 +45,6 @@ export const Category = styled.View`
   border-bottom-style: solid;
 `;
 export const ButtonShipping = styled.Pressable`
-  display: flex;
   flex-direction: row;
   align-items: center;
   gap: 5px;
@@ -92,7 +90,6 @@ export const TitleData = styled.Text`
   margin-bottom: 25px;
 `;
 export const BoxInputs = styled.View`
-  width: 90%;
   gap: 10px;
   margin-left: 7.5px;
   margin-bottom: 20px;
@@ -120,20 +117,20 @@ export const TextInputShipping = styled.TextInput`
 `;
 
 export const Footer = styled.View`
-  display: flex;
   border-top-color: #f1f1f1;
   border-top-width: 2px;
   border-top-style: solid;
-  justify-content: center;
-  align-items: center;
   padding-top: 30px;
   padding-bottom: 30px;
+  padding-horizontal: 20px;
   background-color: #f9f9f9;
+`;
+export const ViewButton = styled.View`
+  flex: 1;
 `;
 
 export const ButtonConfirm = styled.Pressable`
   background-color: #000;
-  width: 90%;
   padding-top: 15px;
   padding-bottom: 15px;
   border-radius: 7.5px;

@@ -6,15 +6,15 @@ interface InputProps extends TextInputProps {
   name: string;
 }
 
-function Inputs({placeholder, name}: InputProps): React.JSX.Element {
+const Inputs: React.FC<InputProps> = ({name, ...rest}) => {
   return (
     <S.BoxInputs>
       <S.Names>
         {name} <S.NameAstDiff>*</S.NameAstDiff>
       </S.Names>
-      <S.TextInputShipping placeholder={placeholder} />
+      <S.TextInputShipping {...rest} />
     </S.BoxInputs>
   );
-}
+};
 
 export default Inputs;

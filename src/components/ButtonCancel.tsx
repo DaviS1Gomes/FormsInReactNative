@@ -1,12 +1,12 @@
 import * as S from '../screens/ShippingScreen/Style';
 import React from 'react';
 
-function ButtonCancel(): React.JSX.Element {
+const ButtonCancel: React.FC = () => {
   return (
     <S.CancelButton>
       <S.CancelText>Cancel</S.CancelText>
     </S.CancelButton>
   );
-}
+};
 
 export default ButtonCancel;
