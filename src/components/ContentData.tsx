@@ -1,14 +1,23 @@
 import React from 'react';
-// import * as yup from 'yup';
+import * as Yup from 'yup';
 import * as S from '../screens/ShippingScreen/Style';
 import Inputs from './Inputs';
 import {useFormik} from 'formik';
-import Footer from './Footer';
+// import Footer from './Footer';
+// import {Text, TouchableOpacity} from 'react-native';
 
 // import ButtonConfirm from './ButtonConfirm';
 // import {Pressable} from 'react-native';
 
 const ContentData: React.FC = () => {
+  const contanctSchema = Yup.object().shape({
+    country: Yup.string().required('Invalid Text!'),
+    fullName: Yup.string().required('Invalid Text!'),
+    streedAdd: Yup.string().required('Invalid Text!'),
+    numberAdd: Yup.number().required().integer().positive(),
+    other: Yup.string().required(),
+  });
+
   const formik = useFormik({
     initialValues: {
       country: '',
@@ -17,6 +26,7 @@ const ContentData: React.FC = () => {
       numberAdd: '',
       others: '',
     },
+    validationSchema: contanctSchema,
     onSubmit: values => {
       console.log('Valores enviados:', values);
     },
@@ -55,7 +65,15 @@ const ContentData: React.FC = () => {
         onChangeText={formik.handleChange('others')}
         value={formik.values.others}
       />
-      <Footer onPresslable={formik.handleSubmit} />
+      <S.ButtonConfirm
+        onPress={() => {
+          formik.handleSubmit();
+        }}>
+        <S.ViewButton>
+          <S.TextConfirmButton>Confirm</S.TextConfirmButton>
+        </S.ViewButton>
+      </S.ButtonConfirm>
+      {/* <Footer onPresslable={formik.handleSubmit} /> */}
     </S.ContentData>
   );
 };
