@@ -1,19 +1,16 @@
 import React from 'react';
 import * as S from './Style';
+import {InputProps} from '../Inputs/Inputs';
 
-interface CustomPropsError {
-  formikError: string | undefined;
-  formikTouched: boolean | undefined;
-}
-
-const ErrorMessage: React.FC<CustomPropsError> = ({
+const ErrorMessage: React.FC<InputProps> = ({
   formikError,
   formikTouched,
+  name,
 }) => {
   return (
     <S.Container>
       {formikError && formikTouched ? (
-        <S.Message>{formikError}</S.Message>
+        <S.Message>* {name + formikError}</S.Message>
       ) : null}
     </S.Container>
   );
