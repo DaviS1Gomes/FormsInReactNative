@@ -105,6 +105,7 @@ export const NameAstDiff = styled.Text`
 `;
 
 export const TextInputShipping = styled.TextInput`
+  width: 325px;
   border-width: 1px;
   border-style: solid;
   border-radius: 7.5px;
