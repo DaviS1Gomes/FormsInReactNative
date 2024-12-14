@@ -1,6 +1,6 @@
-import ButtonCancel from './ButtonCancel';
+import ButtonCancel from '../ButtonCancel/ButtonCancel';
 import React from 'react';
-import * as S from '../screens/ShippingScreen/Style';
+import * as S from './Style';
 
 const Header: React.FC = () => {
   return (

@@ -1,10 +1,10 @@
 import React from 'react';
 import * as Yup from 'yup';
-import * as S from '../screens/ShippingScreen/Style';
-import Inputs from './Inputs';
+import * as A from '../ButtonConfirm/Style';
+import * as S from './Style';
+import Inputs from '../Inputs/Inputs';
 import {useFormik} from 'formik';
-import {Text, View} from 'react-native';
-import ErrorMessage from './ErrorMessage';
+import ErrorMessage from '../ErrorMessage/ErrorMessage';
 
 const ContentData: React.FC = () => {
   const contanctSchema = Yup.object().shape({
@@ -38,9 +38,7 @@ const ContentData: React.FC = () => {
         onChangeText={formik.handleChange('country')}
         value={formik.values.country}
       />
-      {/* {formik.errors.country && formik.touched.country ? (
-        <Text>{formik.errors.country}</Text>
-      ) : null} */}
+
       <ErrorMessage
         formikError={formik.errors.country}
         formikTouched={formik.touched.country}
@@ -69,14 +67,12 @@ const ContentData: React.FC = () => {
         onChangeText={formik.handleChange('others')}
         value={formik.values.others}
       />
-      <S.ButtonConfirm
+      <A.ButtonConfirm
         onPress={() => {
           formik.handleSubmit();
         }}>
-        <S.ViewButton>
-          <S.TextConfirmButton>Confirm</S.TextConfirmButton>
-        </S.ViewButton>
-      </S.ButtonConfirm>
+        <A.TextConfirmButton>Confirm</A.TextConfirmButton>
+      </A.ButtonConfirm>
       {/* <Footer onPresslable={formik.handleSubmit} /> */}
     </S.ContentData>
   );

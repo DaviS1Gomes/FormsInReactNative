@@ -1,5 +1,5 @@
 import React from 'react';
-import * as S from '../screens/ShippingScreen/Style';
+import * as S from './Style';
 import {TextInputProps} from 'react-native';
 
 interface InputProps extends TextInputProps {
@@ -10,9 +10,9 @@ const Inputs: React.FC<InputProps> = ({name, ...rest}) => {
   return (
     <S.BoxInputs>
       <S.Names>
-        {name} <S.NameAstDiff>*</S.NameAstDiff>
+        {name} <S.Required>*</S.Required>
       </S.Names>
-      <S.TextInputShipping {...rest} />
+      <S.TextInput {...rest} />
     </S.BoxInputs>
   );
 };

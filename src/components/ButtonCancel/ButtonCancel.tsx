@@ -1,4 +1,4 @@
-import * as S from '../screens/ShippingScreen/Style';
+import * as S from './Style';
 import React from 'react';
 
 const ButtonCancel: React.FC = () => {

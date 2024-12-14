@@ -1,5 +1,5 @@
 import React from 'react';
-import * as S from '../screens/ShippingScreen/Style';
+import * as S from './Style';
 
 interface ButtonCaregory {
   onPressButton: string;
@@ -13,13 +13,13 @@ function ButtonCategory({
   TextCategory,
 }: ButtonCaregory): React.JSX.Element {
   return (
-    <S.ButtonShipping
+    <S.Button
       onPress={() => {
         console.log(onPressButton);
       }}>
-      <S.NumberCategoryShipping>{NumberCategory}</S.NumberCategoryShipping>
-      <S.TextCategoryShipping>{TextCategory}</S.TextCategoryShipping>
-    </S.ButtonShipping>
+      <S.NumberCategory>{NumberCategory}</S.NumberCategory>
+      <S.TextCategory>{TextCategory}</S.TextCategory>
+    </S.Button>
   );
 }
 

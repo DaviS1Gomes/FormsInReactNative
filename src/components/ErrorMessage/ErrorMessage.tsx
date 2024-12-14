@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import * as S from './Style';
 
 interface CustomPropsError {
   formikError: string | undefined;
@@ -11,9 +11,11 @@ const ErrorMessage: React.FC<CustomPropsError> = ({
   formikTouched,
 }) => {
   return (
-    <View>
-      {formikError && formikTouched ? <Text>{formikError}</Text> : null}
-    </View>
+    <S.Container>
+      {formikError && formikTouched ? (
+        <S.Message>{formikError}</S.Message>
+      ) : null}
+    </S.Container>
   );
 };
 

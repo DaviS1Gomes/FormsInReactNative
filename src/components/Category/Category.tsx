@@ -1,6 +1,6 @@
 import React from 'react';
-import * as S from '../screens/ShippingScreen/Style';
-import ButtonCategory from './ButtonCategory';
+import * as S from './Style';
+import ButtonCategory from '../ButtonCategory/ButtonCategory';
 
 const Category: React.FC = () => {
   return (
