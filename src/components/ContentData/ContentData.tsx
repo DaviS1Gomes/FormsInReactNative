@@ -3,7 +3,7 @@ import * as Yup from 'yup';
 import * as S from './Style';
 import Inputs from '../Inputs/Inputs';
 import {useFormik} from 'formik';
-import {Pressable, Text} from 'react-native';
+import Footer from '../Footer/Footer';
 
 const ContentData: React.FC = () => {
   const contactSchema = Yup.object().shape({
@@ -29,58 +29,58 @@ const ContentData: React.FC = () => {
   });
 
   return (
-    <S.ContentData>
-      <S.TitleData>Enter your shipping address</S.TitleData>
-      <Inputs
-        placeholder={'Ex: Luke Skywalker'}
-        name="Full Name"
-        onChangeText={formik.handleChange('fullName')}
-        value={formik.values.fullName}
-        formikError={formik.errors.fullName}
-        formikTouched={formik.touched.fullName}
-      />
-      <Inputs
-        placeholder={'Ex: Brazil'}
-        name="Country"
-        onChangeText={formik.handleChange('country')}
-        value={formik.values.country}
-        formikError={formik.errors.country}
-        formikTouched={formik.touched.country}
-      />
+    <S.Container>
+      <S.ContentData>
+        <S.TitleData>Enter your shipping address</S.TitleData>
+        <Inputs
+          placeholder={'Ex: Luke Skywalker'}
+          name="Full Name"
+          onChangeText={formik.handleChange('fullName')}
+          value={formik.values.fullName}
+          formikError={formik.errors.fullName}
+          formikTouched={formik.touched.fullName}
+        />
+        <Inputs
+          placeholder={'Ex: Brazil'}
+          name="Country"
+          onChangeText={formik.handleChange('country')}
+          value={formik.values.country}
+          formikError={formik.errors.country}
+          formikTouched={formik.touched.country}
+        />
 
-      <Inputs
-        placeholder={'Ex: Wolf Pen Road'}
-        name="Street Address"
-        onChangeText={formik.handleChange('streetAdd')}
-        value={formik.values.streetAdd}
-        formikError={formik.errors.streetAdd}
-        formikTouched={formik.touched.streetAdd}
-      />
+        <Inputs
+          placeholder={'Ex: Wolf Pen Road'}
+          name="Street Address"
+          onChangeText={formik.handleChange('streetAdd')}
+          value={formik.values.streetAdd}
+          formikError={formik.errors.streetAdd}
+          formikTouched={formik.touched.streetAdd}
+        />
 
-      <Inputs
-        placeholder={'Ex: 1313'}
-        name="Number Address"
-        onChangeText={formik.handleChange('numberAdd')}
-        value={formik.values.numberAdd}
-        formikError={formik.errors.numberAdd}
-        formikTouched={formik.touched.numberAdd}
-      />
-      <Inputs
-        placeholder={'Ex: Reference'}
-        name="Others"
-        onChangeText={formik.handleChange('others')}
-        value={formik.values.others}
-        formikError={formik.errors.others}
-        formikTouched={formik.touched.others}
-      />
-      <Pressable
+        <Inputs
+          placeholder={'Ex: 1313'}
+          name="Number Address"
+          onChangeText={formik.handleChange('numberAdd')}
+          value={formik.values.numberAdd}
+          formikError={formik.errors.numberAdd}
+          formikTouched={formik.touched.numberAdd}
+        />
+        <Inputs
+          placeholder={'Ex: Reference'}
+          name="Others"
+          onChangeText={formik.handleChange('others')}
+          value={formik.values.others}
+          formikError={formik.errors.others}
+          formikTouched={formik.touched.others}
+        />
+      </S.ContentData>
+      <Footer
         onPress={() => {
           formik.handleSubmit();
         }}
-        style={{backgroundColor: 'red', padding: 20}}>
-        <Text>TESTE</Text>
-      </Pressable>
-    </S.ContentData>
+      />
+    </S.Container>
   );
 };
 

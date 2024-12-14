@@ -7,13 +7,14 @@ const ErrorMessage: React.FC<InputProps> = ({
   formikTouched,
   name,
 }) => {
-  return (
-    <S.Container>
-      {formikError && formikTouched ? (
+  if (formikError && formikTouched) {
+    return (
+      <S.Container>
         <S.Message>* {name + formikError}</S.Message>
-      ) : null}
-    </S.Container>
-  );
+      </S.Container>
+    );
+  } else {
+    return null;
+  }
 };
-
 export default ErrorMessage;
