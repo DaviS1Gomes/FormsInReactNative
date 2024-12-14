@@ -1,17 +1,17 @@
 import React from 'react';
 import * as Yup from 'yup';
-import * as A from '../ButtonConfirm/Style';
 import * as S from './Style';
 import Inputs from '../Inputs/Inputs';
 import {useFormik} from 'formik';
+import {Pressable, Text} from 'react-native';
 
 const ContentData: React.FC = () => {
-  const contanctSchema = Yup.object().shape({
+  const contactSchema = Yup.object().shape({
     fullName: Yup.string().required('Required!'),
     country: Yup.string().required('Required!'),
-    streedAdd: Yup.string().required('Required!'),
+    streetAdd: Yup.string().required('Required!'),
     numberAdd: Yup.number().required('Required!').integer().positive(),
-    other: Yup.string(),
+    others: Yup.string(),
   });
 
   const formik = useFormik({
@@ -22,9 +22,9 @@ const ContentData: React.FC = () => {
       numberAdd: '',
       others: '',
     },
-    validationSchema: contanctSchema,
+    validationSchema: contactSchema,
     onSubmit: values => {
-      console.log('Valores enviados:', values);
+      console.log('Mensage Enviada', values);
     },
   });
 
@@ -73,13 +73,13 @@ const ContentData: React.FC = () => {
         formikError={formik.errors.others}
         formikTouched={formik.touched.others}
       />
-      <A.ButtonConfirm
+      <Pressable
         onPress={() => {
           formik.handleSubmit();
-        }}>
-        <A.TextConfirmButton>Confirm</A.TextConfirmButton>
-      </A.ButtonConfirm>
-      {/* <Footer onPresslable={formik.handleSubmit} /> */}
+        }}
+        style={{backgroundColor: 'red', padding: 20}}>
+        <Text>TESTE</Text>
+      </Pressable>
     </S.ContentData>
   );
 };
