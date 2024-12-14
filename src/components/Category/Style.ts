@@ -3,10 +3,8 @@ import styled from 'styled-components/native';
 export const Category = styled.View`
   background-color: #f9f9f9;
   flex-direction: row;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-vertical: 30px;
+  padding-horizontal: 20px;
   justify-content: space-around;
   align-items: center;
 
@@ -18,7 +16,6 @@ export const Category = styled.View`
 export const HifenDiv = styled.View`
   width: 10px;
   height: 2px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-horizontal: 10px;
   background-color: #c9c9c9;
 `;

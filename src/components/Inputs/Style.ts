@@ -23,7 +23,6 @@ export const TextInput = styled.TextInput`
   border-color: #c5c6c6;
   font-size: 17.5px;
   padding-left: 20px;
-  padding-top: 12.5px;
-  padding-bottom: 12.5px;
+  padding-vertical: 12.5px;
   margin-left: 5px;
 `;

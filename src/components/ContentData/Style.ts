@@ -9,6 +9,5 @@ export const ContentData = styled.ScrollView`
 export const TitleData = styled.Text`
   font-weight: bold;
   font-size: 22.5px;
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin-vertical: 25px;
 `;
