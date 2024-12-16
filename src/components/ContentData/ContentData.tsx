@@ -4,8 +4,11 @@ import * as S from './Style';
 import Inputs from '../Inputs/Inputs';
 import {useFormik} from 'formik';
 import Footer from '../Footer/Footer';
+import {useNavigation} from '@react-navigation/native';
 
 const ContentData: React.FC = () => {
+  const navigation = useNavigation();
+
   const contactSchema = Yup.object().shape({
     fullName: Yup.string().required('Required!'),
     country: Yup.string().required('Required!'),
@@ -24,10 +27,10 @@ const ContentData: React.FC = () => {
     },
     validationSchema: contactSchema,
     onSubmit: values => {
+      navigation.navigate('Payment');
       console.log('Mensage Enviada', values);
     },
   });
-
   return (
     <S.Container>
       <S.ContentData>

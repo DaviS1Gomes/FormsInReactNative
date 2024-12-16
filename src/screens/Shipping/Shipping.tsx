@@ -1,5 +1,5 @@
 import React from 'react';
-import * as S from '../../screens/ShippingScreen/Style';
+import * as S from './Style';
 import ContentData from '../../components/ContentData/ContentData';
 import Category from '../../components/Category/Category';
 import Header from '../../components/Header/Header';

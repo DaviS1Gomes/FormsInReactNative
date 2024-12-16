@@ -7,8 +7,6 @@ export const Container = styled.View`
 export const ContentData = styled.ScrollView`
   background-color: #fff;
   padding-left: 20px;
-  position: absolute;
-  max-height: 510px;
 `;
 
 export const TitleData = styled.Text`

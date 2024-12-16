@@ -1,26 +1,23 @@
 import React from 'react';
 import * as S from './Style';
+import {PressableProps} from 'react-native';
 
-interface ButtonCaregory {
-  onPressButton: string;
+interface ButtonCaregory extends PressableProps {
   NumberCategory: number;
   TextCategory: string;
 }
 
-function ButtonCategory({
-  onPressButton,
+const ButtonCategory: React.FC<ButtonCaregory> = ({
   NumberCategory,
   TextCategory,
-}: ButtonCaregory): React.JSX.Element {
+  ...rest
+}) => {
   return (
-    <S.Button
-      onPress={() => {
-        console.log(onPressButton);
-      }}>
+    <S.Button {...rest}>
       <S.NumberCategory>{NumberCategory}</S.NumberCategory>
       <S.TextCategory>{TextCategory}</S.TextCategory>
     </S.Button>
   );
-}
+};
 
 export default ButtonCategory;

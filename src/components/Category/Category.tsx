@@ -1,24 +1,33 @@
 import React from 'react';
 import * as S from './Style';
 import ButtonCategory from '../ButtonCategory/ButtonCategory';
+import {useNavigation} from '@react-navigation/native';
 
 const Category: React.FC = () => {
+  const navigation = useNavigation();
+
   return (
     <S.Category>
       <ButtonCategory
-        onPressButton={'BOTAO PRESSIONADO'}
         TextCategory={'Shipping'}
         NumberCategory={1}
+        onPress={() => {
+          navigation.navigate('Shipping');
+        }}
       />
       <S.HifenDiv />
       <ButtonCategory
-        onPressButton={'BOTAO PRESSIONADO 2'}
+        onPress={() => {
+          navigation.navigate('Payment');
+        }}
         TextCategory={'Payment'}
         NumberCategory={2}
       />
       <S.HifenDiv />
       <ButtonCategory
-        onPressButton={'BOTAO PRESSIONADO 3'}
+        onPress={() => {
+          navigation.navigate('Review');
+        }}
         TextCategory={'Review'}
         NumberCategory={3}
       />
